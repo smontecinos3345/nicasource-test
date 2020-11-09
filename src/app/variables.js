@@ -1,3 +1,12 @@
-exports.name = function(voxaEvent) {
-  return voxaEvent.model.name;
+function userWins(voxaEvent) {
+  return voxaEvent.model.userWins;
+}
+
+function alexaWins(voxaEvent) {
+  return voxaEvent.model.alexaWins;
+}
+
+module.exports = {
+  userWins,
+  alexaWins,
 };
