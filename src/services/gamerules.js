@@ -1,5 +1,5 @@
 
-const { basicRules } = require('./constants');
+const { basicRules } = require('../app/constants');
 
 const winningHands = basicRules
   .map(textualRule => textualRule.replace(" beats ", " "))

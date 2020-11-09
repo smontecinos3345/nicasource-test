@@ -1,4 +1,4 @@
-const { getReferee } = require("../gamerules");
+const { getReferee } = require("../../services/gamerules");
 
 function register(voxaApp) {
   const referee = getReferee("user", "alexa");

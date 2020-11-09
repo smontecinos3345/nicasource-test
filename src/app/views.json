@@ -33,6 +33,20 @@
         "say": "Should we play again?",
         "reprompt": "Should we play again?"
       },
+      "TellScore": {
+        "say": "The score right now is: Alexa {alexaWins}, you {userWins}."
+      },
+      "NoScore": {
+        "say": "We haven't started playing yet. There's no score."
+      },
+      "AskIfStartPlaying": {
+        "say": "Should we start a new game?",
+        "reprompt": "Should we start a new game?"
+      },
+      "AskIfResumeGame": {
+        "say": "Should we resume the game?",
+        "reprompt": "Should resume the game?"
+      },
       "RestartGame": {
         "say": "All right!"
       },

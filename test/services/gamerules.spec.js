@@ -1,4 +1,4 @@
-const { getReferee } = require("../../src/app/gamerules");
+const { getReferee } = require("../../src/services/gamerules");
 const assert = require("assert");
 describe("gameRules", function() {
   describe("#getReferee", function() {
