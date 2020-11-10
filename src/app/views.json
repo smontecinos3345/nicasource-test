@@ -60,6 +60,9 @@
       },
       "Bye": {
         "say": "That's all right, until next time!"
+      },
+      "Help": {
+        "say": "A super fun classical game: rock paper scissors. Here're the basic rules: {basicRules}. Wanna have a go?."
       }
     }
   }

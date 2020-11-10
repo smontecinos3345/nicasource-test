@@ -6,6 +6,7 @@ const processWinner = require("./processWinner");
 const newGameInter = require("./newGameInter");
 const cancelIntent = require("./cancelntent");
 const tellScore = require("./tellScore");
+const help = require("./help");
 
 function register(voxaApp) {
   launchInent(voxaApp);
@@ -15,6 +16,7 @@ function register(voxaApp) {
   newGameInter(voxaApp);
   cancelIntent(voxaApp);
   tellScore(voxaApp);
+  help(voxaApp);
 }
 
 module.exports = register;
