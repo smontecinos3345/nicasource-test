@@ -4,10 +4,10 @@ This application is written using the [voxa3](https://github.com/mediarain/voxa)
 
 ## Development setup
 
-- Install and use Node v8.10
-- Run `yarn`
+- Install the correct version of node.js using nvm
+- Run `npm install`
 - Create a `src/config/local.json` file and customize it for your local setup, you can use `src/config/local.example.json`
-- Start the development server with `yarn watch`
+- Start the development server with `npm run watch`
 
 ## Tests
 
@@ -16,7 +16,7 @@ This project has a test suite built using [mocha](https://mochajs.org/), [chai](
 ### Running the tests
 
 ```sh
-$ yarn test --watch --bail
+$ npm run test --watch --bail
 ```
 
 ## Interaction Model and Publishing Information
@@ -24,7 +24,7 @@ $ yarn test --watch --bail
 The interaction model and publishing information are managed using the voxa-cli, provided you have configured access to the google spreadsheets updating it can be accomplished by running the following command
 
 ```sh
-$ yarn interaction
+$ npm run interaction
 ```
 
 ## Resources
