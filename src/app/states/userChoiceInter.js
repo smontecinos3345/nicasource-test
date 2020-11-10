@@ -29,6 +29,8 @@ function register(voxaApp) {
     voxaEvent.model.userChoice = undefined;
     voxaEvent.model.alexaChoice = getAlexasChoice();
 
+    console.log(`alexa's choice is ${voxaEvent.model.alexaChoice}`);
+
     return {
       flow: "yield",
       reply: "AskUserChoice",
@@ -36,8 +38,8 @@ function register(voxaApp) {
     };
   });
 
-   // eslint-disable-next-line consistent-return
-   voxaApp.onState("getUserChoice", voxaEvent => {
+  // eslint-disable-next-line consistent-return
+  voxaApp.onState("getUserChoice", voxaEvent => {
     if (voxaEvent.intent.name === "RockIntent") {
       voxaEvent.model.userChoice = "rock";
     } else if (voxaEvent.intent.name === "PaperIntent") {

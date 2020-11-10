@@ -36,6 +36,10 @@
       "TellScore": {
         "say": "The score right now is: Alexa {alexaWins}, you {userWins}."
       },
+      "AskIfDiscardGame": {
+        "say": "The score right now is: Alexa {alexaWins}, you {userWins}. Are you sure you want to start a new game?",
+        "reprompt": "Are you sure you want to start a new game?"
+      },
       "NoScore": {
         "say": "We haven't started playing yet. There's no score."
       },

@@ -1,3 +1,19 @@
+const { confirmationFactory } = require("../../services/confirmation");
+
+function askIfDiscardCurrentGame() {
+  return {
+    flow: "yield",
+    reply: "AskIfDiscardGame",
+    to: "getIfDiscardGame",
+  };
+}
+
+const getIfDiscardGame = confirmationFactory("askHowManyWins", {
+  flow: "yield",
+  reply: "AskIfResumeGame",
+  to: "getIfResumeGame",
+});
+
 function register(voxaApp) {
 
   // eslint-disable-next-line consistent-return
@@ -26,6 +42,13 @@ function register(voxaApp) {
       };
     }
   });
+
+
+  //requirement two.
+
+  voxaApp.onIntent("NewGameIntent", askIfDiscardCurrentGame);
+  voxaApp.onState("getIfDiscardGame", getIfDiscardGame);
+
 }
 
 module.exports = register;
