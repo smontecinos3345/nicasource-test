@@ -1,4 +1,5 @@
 const confirmationFactory = (targetYes, transitionOnNo = null) => {
+  // eslint-disable-next-line consistent-return
   return voxaEvent => {
     if (voxaEvent.intent.name === "YesIntent") {
       if (typeof targetYes !== "string") {
