@@ -1,8 +1,7 @@
-
 const confirmationFactory = (targetYes, transitionOnNo = null) => {
-  return (voxaEvent) => {
+  return voxaEvent => {
     if (voxaEvent.intent.name === "YesIntent") {
-      if (typeof targetYes !== 'string') {
+      if (typeof targetYes !== "string") {
         return targetYes;
       }
 

@@ -1,11 +1,11 @@
 const launchInent = require("./launchIntent");
 
-const maxWinsInter = require('./maxWinsInter');
-const userChoiceInter = require('./userChoiceInter');
+const maxWinsInter = require("./maxWinsInter");
+const userChoiceInter = require("./userChoiceInter");
 const processWinner = require("./processWinner");
-const newGameInter = require('./newGameInter');
-const cancelIntent = require('./cancelntent');
-const tellScore = require('./tellScore');
+const newGameInter = require("./newGameInter");
+const cancelIntent = require("./cancelntent");
+const tellScore = require("./tellScore");
 
 function register(voxaApp) {
   launchInent(voxaApp);

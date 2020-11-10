@@ -1,6 +1,6 @@
 const { confirmationFactory } = require("../../services/confirmation");
 
-const startGameInteraction  = () => ({
+const startGameInteraction = () => ({
   flow: "continue",
   reply: "StartGame",
   to: "askUserChoice",
@@ -13,7 +13,6 @@ const getIfMaxWinsAreValid = confirmationFactory(startGameInteraction(), {
 });
 
 function register(voxaApp) {
-
   voxaApp.onState("askHowManyWins", () => {
     return {
       flow: "yield",
@@ -38,7 +37,7 @@ function register(voxaApp) {
     }
   });
 
-  //requirement three
+  // requirement three
   voxaApp.onState("getIfMaxWinsAreValid", getIfMaxWinsAreValid);
 }
 

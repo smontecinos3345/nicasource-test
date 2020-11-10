@@ -1,12 +1,10 @@
-
-const { basicRules } = require('../app/constants');
+const { basicRules } = require("../app/constants");
 
 const winningHands = basicRules
   .map(textualRule => textualRule.replace(" beats ", " "))
   .map(rule => rule.split(" "));
 
-
-const winningHandToLosingHand = (hand) => [hand[1], hand[0]];
+const winningHandToLosingHand = hand => [hand[1], hand[0]];
 /**
  *
  * @param {*} me the name of the first player (the user in this case)
@@ -19,8 +17,8 @@ const winningHandToLosingHand = (hand) => [hand[1], hand[0]];
 function getReferee(me, other) {
   const winningRules = winningHands.map(winningHand => [winningHand, me]);
   const losingRules = winningHands
-  .map(winningHandToLosingHand)
-  .map(losingHand => [losingHand, other]);
+    .map(winningHandToLosingHand)
+    .map(losingHand => [losingHand, other]);
   const rules = [...winningRules, ...losingRules];
   return {
     getWinner(myAnswer, theirAnswer) {

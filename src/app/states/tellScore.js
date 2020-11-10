@@ -1,8 +1,8 @@
-const { confirmationFactory } = require('../../services/confirmation');
+const { confirmationFactory } = require("../../services/confirmation");
 
 function tellScore(voxaEvent) {
   const { userWins, alexaWins } = voxaEvent.model;
-  if (typeof userWins === 'undefined' && typeof alexaWins === 'undefined') {
+  if (typeof userWins === "undefined" && typeof alexaWins === "undefined") {
     return {
       flow: "continue",
       reply: "NoScore",
@@ -30,18 +30,18 @@ function askIfStartPlaying() {
     flow: "yield",
     reply: "AskIfStartPlaying",
     to: "getIfStartPlaying",
-  }
+  };
 }
 
-const getIfStartPlaying = confirmationFactory('askHowManyWins');
-const getIfResumeGame = confirmationFactory('askUserChoice');
+const getIfStartPlaying = confirmationFactory("askHowManyWins");
+const getIfResumeGame = confirmationFactory("askUserChoice");
 
 function register(voxaApp) {
   voxaApp.onIntent("TellScore", tellScore);
   voxaApp.onState("askIfStartPlaying", askIfStartPlaying);
   voxaApp.onState("getIfStartPlaying", getIfStartPlaying);
-  voxaApp.onState('askIfResumeGame', askIfResumeGame);
-  voxaApp.onState('getIfResumeGame', getIfResumeGame);
+  voxaApp.onState("askIfResumeGame", askIfResumeGame);
+  voxaApp.onState("getIfResumeGame", getIfResumeGame);
 }
 
 module.exports = register;

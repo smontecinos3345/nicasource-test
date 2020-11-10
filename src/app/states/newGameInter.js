@@ -15,7 +15,6 @@ const getIfDiscardGame = confirmationFactory("askHowManyWins", {
 });
 
 function register(voxaApp) {
-
   // eslint-disable-next-line consistent-return
   voxaApp.onState("askIfStartANewGame", () => {
     return {
@@ -43,12 +42,10 @@ function register(voxaApp) {
     }
   });
 
-
-  //requirement two.
+  // requirement two.
 
   voxaApp.onIntent("NewGameIntent", askIfDiscardCurrentGame);
   voxaApp.onState("getIfDiscardGame", getIfDiscardGame);
-
 }
 
 module.exports = register;
