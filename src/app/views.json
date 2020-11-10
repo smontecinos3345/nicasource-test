@@ -51,6 +51,10 @@
         "say": "Should we resume the game?",
         "reprompt": "Should resume the game?"
       },
+      "ConfirmMaxWins": {
+        "say": "{maxWins} is a big number, are you sure you want to play until one of us wins {maxWins} times?",
+        "reprompt": "are you sure you want to play until one of us wins {maxWins} times?"
+      },
       "RestartGame": {
         "say": "All right!"
       },

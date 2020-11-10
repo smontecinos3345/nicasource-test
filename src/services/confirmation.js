@@ -2,6 +2,10 @@
 const confirmationFactory = (targetYes, transitionOnNo = null) => {
   return (voxaEvent) => {
     if (voxaEvent.intent.name === "YesIntent") {
+      if (typeof targetYes !== 'string') {
+        return targetYes;
+      }
+
       return {
         flow: "continue",
         to: targetYes,
